@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import {HelloWorldApp} from "./HelloWorldApp.jsx";
 import {MyFirstApp} from "./MyFirstApp.jsx";
+import {CounterApp} from "./counterApp.jsx";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -11,5 +12,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       subtitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias at consectetur consequuntur dicta dignissimos ea esse est exercitationem id iusto minima nemo nihil, odio, officia quibusdam reprehenderit tempora veniam voluptatum."
       operation={2}
     />
+    <CounterApp value={9}/>
   </React.StrictMode>
 );
