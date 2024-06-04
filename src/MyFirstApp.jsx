@@ -16,6 +16,8 @@ const fnSaludo = (persona) => {
   eres ${!persona.isAdmin ? 'Administrador' : 'Usuario'}`
 }
 
+import './styles.css';
+
 export const MyFirstApp = () => {
   return (
     <>
