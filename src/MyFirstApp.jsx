@@ -18,12 +18,13 @@ const fnSaludo = (persona) => {
 
 import './styles.css';
 
-export const MyFirstApp = () => {
+export const MyFirstApp = ({ title, subtitle, operation }) => {
   return (
     <>
       {fnSaludo(objectPerson)}
-      <h1>Hola ivan!</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias at consectetur consequuntur dicta dignissimos ea esse est exercitationem id iusto minima nemo nihil, odio, officia quibusdam reprehenderit tempora veniam voluptatum.</p>
+      <h1>Hola {title}!</h1>
+      <p>{subtitle}</p>
+      <p>{operation + 1}</p>
     </>
   )
 }
