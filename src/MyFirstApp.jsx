@@ -16,6 +16,8 @@ const fnSaludo = (persona) => {
   eres ${!persona.isAdmin ? 'Administrador' : 'Usuario'}`
 }
 
+/*Se instalo PropTypes para hacer obligatorias las variables*/
+import PropTypes from "prop-types";
 import './styles.css';
 
 export const MyFirstApp = ({ title, subtitle, operation }) => {
@@ -27,4 +29,10 @@ export const MyFirstApp = ({ title, subtitle, operation }) => {
       <p>{operation + 1}</p>
     </>
   )
+}
+
+MyFirstApp.propTypes =  {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
+  operation: PropTypes.number,
 }
