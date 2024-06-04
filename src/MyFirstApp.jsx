@@ -20,13 +20,14 @@ const fnSaludo = (persona) => {
 import PropTypes from "prop-types";
 import './styles.css';
 
-export const MyFirstApp = ({ title, subtitle, operation }) => {
+export const MyFirstApp = ({ title, subtitle, operation, description }) => {
   return (
     <>
       {fnSaludo(objectPerson)}
       <h1>Hola {title}!</h1>
       <p>{subtitle}</p>
       <p>{operation + 1}</p>
+      <p>{description}</p>
     </>
   )
 }
@@ -35,4 +36,12 @@ MyFirstApp.propTypes =  {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   operation: PropTypes.number,
+  description: PropTypes.string,
+}
+
+MyFirstApp.defaultProps = {
+  title: 'No hay titulo',
+  subtitle: 'No hay subtitulo',
+  operation: undefined,
+  description: 'no hay descripción'
 }
